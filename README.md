@@ -9,6 +9,14 @@ handle reading and writing JSON files. It is specifically intended to support
 the persistent storage of App Settings in a JSON file (.json), but it can be used
 for interfacing with any JSON data.
 
+The current implementation supports 128 levels of nested Objects, including
+nested Arrays. This can be changed with a single constant in the Class.
+
+    /// <summary>
+    /// The maximum number of nested objects and arrays allowed in a JSON file.
+    /// Change this value to suit your needs.
+    /// </summary>
+    public const int NestedObjects = 128;
 
 ## Getting Started
 
@@ -22,8 +30,6 @@ It has no depenciies beyond teh standard .NET libraries.
     using System.IO;        // for File IO
     using System.Text;      // for StringBuilder use in Exception logging
     using System.Threading; // for detecting ThreadAbortException
-
-
 
 ### Using the Class
 
@@ -148,13 +154,13 @@ Contributors names and contact info
 ## Release History
 
 * 0.0
-    * 2023-05 - Initial Release within our Control.NET and Sequence.NET Apps
+    * 2023-05-30 - Initial Release within our Control.NET and Sequence.NET Apps
+    * 2023-05-31 - Add support for up to 128 nested Objects and Arrays
 
 
 ## Future Development
 
 * 0.n
-    * New Feature: Handle Arrays
     * New Feature: Handle Binary Data
     * Fix Defects: ...
 
