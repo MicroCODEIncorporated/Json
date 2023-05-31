@@ -69,8 +69,15 @@ Json.Write.Member(objName, "User Role", _userRole);
 * Close your Object in the .json:
 
 ```
+Json.Write.CloseObject();
+```
+
+* Close your JSON file:
+
+```
 Json.Write.Close();
 ```
+
 
 #### Reading your App Settings from a .json
 
@@ -107,7 +114,7 @@ Json.Read.Member(objName, "User", "default value", out  _userName);
 Json.Read.Member(objName, "User Role", "default value", out  _userRole);
 ```
 
-* Close your Object in the .json:
+* Close your JSON File:
 
 ```
 Json.Read.Close();
